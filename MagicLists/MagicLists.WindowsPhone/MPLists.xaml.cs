@@ -36,7 +36,9 @@ namespace MagicLists
 
         }
 
-
+        /// <summary>
+        /// Invoked when the list needs to be populated via parse.com
+        /// </summary>
         public  async void populatelist()
         {
             try
