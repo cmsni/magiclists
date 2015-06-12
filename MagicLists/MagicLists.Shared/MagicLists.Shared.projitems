@@ -19,4 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)DAL\MagicLists.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DAL\MagicListsDal.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
+  </ItemGroup>
 </Project>

@@ -25,9 +25,9 @@ namespace MagicLists
     /// </summary>
     public sealed partial class MPLists : Page
     {
-
-        MagicListsDal _db = new MagicListsDal();
-        public MPLists()
+       
+        List<DataModel.MagicLists> mLists;
+         public MPLists()
         {
             this.InitializeComponent();
 
@@ -43,11 +43,13 @@ namespace MagicLists
         {
             try
             {
+                MagicListsDal _db = new MagicListsDal();
+     
+           
+                   mLists=await _db.GetListsAync();
 
-                List<DataModel.MagicLists> mLists;
-                mLists=await _db.GetListsAync();
-
-                lstView.ItemsSource = mLists;
+               lstView.ItemsSource = mLists;
+                
 
             }
             catch(Exception ex)
@@ -62,6 +64,9 @@ namespace MagicLists
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+
+
+
         }
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
@@ -70,11 +75,12 @@ namespace MagicLists
 
         private async Task LstView_OnPullToRefreshRequested(object sender, EventArgs e)
         {
-            lstView.ItemsSource = null;
-            List<DataModel.MagicLists> mLists;
-            mLists = await _db.GetListsAync();
+              populatelist();
+        }
 
-            lstView.ItemsSource = mLists;
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            populatelist();
         }
     }
 }

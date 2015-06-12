@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -16,6 +18,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using Parse;
+
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
@@ -28,8 +31,10 @@ namespace MagicLists
     {
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
-#endif
+        public static string DB_PATH = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, "MagicLists.sqlite"));//DataBase Name 
 
+#endif
+       
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -39,9 +44,12 @@ namespace MagicLists
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
 
-            ParseClient.Initialize("lUylicSDRyITeLb2E45glaLfYOm1yLZus0ibrhej", "lAW2rKf6C4Ucyknt2S5l8pOTtcWR8PCeXMiv5ydi");
+            ParseClient.Initialize("lUylicSDRyITeLb2E45glaLfYOm1yLZus0ibrhej",
+                "lAW2rKf6C4Ucyknt2S5l8pOTtcWR8PCeXMiv5ydi");
 
+ 
         }
+ 
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

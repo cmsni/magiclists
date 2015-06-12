@@ -13,12 +13,12 @@ namespace MagicLists.DataModel
         public async Task<List<MagicLists>> GetListsAync()
         {
             var query = ParseObject.GetQuery("lists");
+
+
             IEnumerable<ParseObject> result = new List<ParseObject>();
-            try
-            {
-                result = await query.FindAsync();
-            }
-            catch (Exception ex) { }
+
+
+            result = await query.FindAsync();
 
             var listItems = new List<MagicLists>();
             foreach (var listItemParseObject in result)
@@ -27,12 +27,10 @@ namespace MagicLists.DataModel
                 listItems.Add(listItem);
             }
             return listItems;
+
+
+
+
         }
-
-
-
-        
-
- 
     }
 }

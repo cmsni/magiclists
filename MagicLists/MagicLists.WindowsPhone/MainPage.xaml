@@ -4,8 +4,7 @@
     xmlns:local="using:MagicLists"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:primitives="using:Telerik.UI.Xaml.Controls.Primitives"
-    x:Class="MagicLists.MainPage"
+  x:Class="MagicLists.MainPage"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource TextStyleLargeFontSize}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -21,14 +20,8 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,14,0" Background="#FFFDFDFD" HorizontalAlignment="Right" Width="376">
+            <Button Content="Goto Parse List" HorizontalAlignment="Left" Margin="40,83,0,0" VerticalAlignment="Top" BorderBrush="Black" Foreground="#FF3A0D0D" Click="Button_Click_1"/>
 
-
-            <primitives:RadHubTile HorizontalAlignment="Left" Margin="6,198,0,0" VerticalAlignment="Top" Background="#FF212181" Title="Lists"/>
-            <primitives:RadHubTile HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" Background="#FF212181" Title="Events"/>
-            <primitives:RadHubTile HorizontalAlignment="Left" Margin="200,198,0,0" VerticalAlignment="Top" Background="#FF212181" Title="Reminders"/>
-            <primitives:RadHubTile x:Name="hubNotes" HorizontalAlignment="Left" Margin="6,10,0,0" VerticalAlignment="Top" Background="#FF212181" Title="Notes"   ImageSource="Assets/Tiles/Apps-Notepad-Metro-icon.png" Tapped="hubNotes_Tapped"/>
-            <primitives:RadHubTile HorizontalAlignment="Left" Margin="200,399,0,0" VerticalAlignment="Top" Background="#FF212181" Title="About"/>
-            <primitives:RadHubTile HorizontalAlignment="Left" Margin="6,399,0,0" VerticalAlignment="Top" Background="#FF212181" Title="Settings"/>
 
 
         </Grid>

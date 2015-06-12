@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,9 +20,9 @@ namespace MagicLists
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class MPListEdit : Page
     {
-        public MainPage()
+        public MPListEdit()
         {
             this.InitializeComponent();
         }
@@ -35,30 +34,6 @@ namespace MagicLists
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-        }
-
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void hubNotes_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-
-            this.Frame.Navigate(typeof(MPLists));
-
-           
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-     
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MPLists));
         }
     }
 }

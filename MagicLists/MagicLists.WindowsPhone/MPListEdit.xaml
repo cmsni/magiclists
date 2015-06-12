@@ -1,0 +1,35 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MagicLists"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    x:Class="MagicLists.MPListEdit"
+    mc:Ignorable="d"
+    Foreground="Black"
+    FontWeight="Bold"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,35,14,-35.333" Background="#FFFDFDFD" HorizontalAlignment="Right" Width="376">
+            <TextBlock HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Margin="68,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="25" Width="272"/>
+            <TextBox HorizontalAlignment="Left" Margin="68,75,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="120" Width="272" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,85,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" RenderTransformOrigin="0.484,5.256"/>
+
+
+ 
+            <TextBlock HorizontalAlignment="Left" Margin="10,185,0,0" TextWrapping="Wrap" Text="Date" VerticalAlignment="Top" RenderTransformOrigin="0.484,5.256"/>
+
+
+
+        </Grid>
+    </Grid>
+</Page>

@@ -83,6 +83,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MPListEdit.xaml.cs">
+      <DependentUpon>MPListEdit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MPLists.xaml.cs">
       <DependentUpon>MPLists.xaml</DependentUpon>
     </Compile>
@@ -145,6 +148,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MPListEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MPLists.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -171,39 +178,17 @@
       <HintPath>..\..\packages\ExtendedListview.0.0.5.5\lib\portable-win81+wpa81\ExtendedListView.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Parse, Version=1.5.1.0, Culture=neutral, PublicKeyToken=ba48c3a442de616e, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Parse.1.5.1\lib\wpa81\Parse.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Parse.WinRT, Version=1.5.1.0, Culture=neutral, PublicKeyToken=ba48c3a442de616e, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Parse.1.5.1\lib\wpa81\Parse.WinRT.dll</HintPath>
+    <Reference Include="Parse, Version=1.5.2.0, Culture=neutral, PublicKeyToken=ba48c3a442de616e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Parse.1.5.2\lib\wpa81\Parse.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Core">
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for Windows Universal Q1 2015\Binaries\Common\Telerik.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Data, Version=2015.1.226.45, Culture=neutral, PublicKeyToken=54096b0481e00341, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for Windows Universal Q1 2015\Binaries\Common\Telerik.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.UI.Xaml.Chart, Version=2015.1.226.45, Culture=neutral, PublicKeyToken=54096b0481e00341, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for Windows Universal Q1 2015\Binaries\Windows Phone 8.1\Telerik.UI.Xaml.Chart.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.UI.Xaml.Controls.Data, Version=2015.1.226.45, Culture=neutral, PublicKeyToken=54096b0481e00341, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for Windows Universal Q1 2015\Binaries\Windows Phone 8.1\Telerik.UI.Xaml.Controls.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.UI.Xaml.DataVisualization">
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for Windows Universal Q1 2015\Binaries\Windows Phone 8.1\Telerik.UI.Xaml.DataVisualization.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.UI.Xaml.Input, Version=2015.1.226.45, Culture=neutral, PublicKeyToken=54096b0481e00341, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for Windows Universal Q1 2015\Binaries\Windows Phone 8.1\Telerik.UI.Xaml.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.UI.Xaml.Primitives, Version=2015.1.226.45, Culture=neutral, PublicKeyToken=54096b0481e00341, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for Windows Universal Q1 2015\Binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives.dll</HintPath>
+    <Reference Include="Parse.WinRT, Version=1.5.2.0, Culture=neutral, PublicKeyToken=ba48c3a442de616e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Parse.1.5.2\lib\wpa81\Parse.WinRT.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +199,10 @@
       <Project>{5c058f7b-68a5-4ad6-a6bb-8f2db3169dd0}</Project>
       <Name>Universal.UI.Xaml.Controls</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
